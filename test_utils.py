@@ -35,4 +35,5 @@ def test_nearest_neighbor():
     # Compute the expected index by finding the nearest neighbor manually
     distances = np.linalg.norm(data - query, axis=1)
     expected_index = np.argmin(distances)
+    
     assert result == expected_index, f"Expected index {expected_index}, but got {result}"
