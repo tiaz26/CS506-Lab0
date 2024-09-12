@@ -39,7 +39,7 @@ def nearest_neighbor(target_vector, vectors):
     target_vector in terms of cosine similarity.
     
     # Hint: You should use the cosine_similarity function that you already wrote.
-    # Hint: For this lab, you can just use a for loop to iterate through vectors.
+    # Hint: For this lab, you can use a for loop to iterate through vectors.
     '''
     max_similarity = -float('inf')
     nearest_index = -1

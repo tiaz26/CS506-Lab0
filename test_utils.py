@@ -32,8 +32,8 @@ def test_nearest_neighbor():
     
     result = nearest_neighbor(query, data)
     
-    # Compute the expected index by finding the nearest neighbor manually
-    distances = np.linalg.norm(data - query, axis=1)
-    expected_index = np.argmin(distances)
+    # Compute the expected index by finding the nearest neighbor manually using cosine similarity
+    similarities = [cosine_similarity(query, vector) for vector in data]
+    expected_index = np.argmax(similarities)
     
     assert result == expected_index, f"Expected index {expected_index}, but got {result}"
